@@ -1,0 +1,7 @@
+flask
+pandas
+numpy
+joblib
+scikit-learn
+reportlab
+python-dateutil

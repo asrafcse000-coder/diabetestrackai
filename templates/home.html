@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Diabetes Track AI{% endblock %}
+
+{% block content %}
+<div class="hero-section bg-gradient text-white py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    <span class="text-warning">Diabetes Risk</span> Assessment
+                </h1>
+                <p class="lead mb-4">
+                    Use our advanced machine learning model to assess your diabetes risk factors. 
+                    Get instant insights about your health metrics and receive personalized recommendations.
+                </p>
+                <a href="/assessment" class="btn btn-warning btn-lg fw-bold">
+                    <i class="fas fa-heartbeat me-2"></i>Start New Assessment
+                </a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="display-1 animated-icon">🏥</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features/Health Tips Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">
+            <i class="fas fa-lightbulb text-warning me-2"></i>Health Insights & Recommendations
+        </h2>
+        
+        <div class="row g-4">
+            <!-- Card 1: Diet -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card health-card h-100 border-0 shadow-sm hover-lift">
+                    <div class="card-body">
+                        <div class="health-icon mb-3">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Healthy Diet</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Increase fiber intake</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Reduce sugar consumption</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Control portion sizes</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Choose whole grains</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Exercise -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card health-card h-100 border-0 shadow-sm hover-lift">
+                    <div class="card-body">
+                        <div class="health-icon mb-3">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Regular Exercise</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>150 mins/week moderate activity</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Strength training 2x/week</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Stay active throughout day</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Reduce sedentary time</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Monitoring -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card health-card h-100 border-0 shadow-sm hover-lift">
+                    <div class="card-body">
+                        <div class="health-icon mb-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Regular Monitoring</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Check blood glucose regularly</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Track HbA1c levels</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Monitor weight & BMI</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Visit doctor regularly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Stress Management -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card health-card h-100 border-0 shadow-sm hover-lift">
+                    <div class="card-body">
+                        <div class="health-icon mb-3">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Stress Management</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Practice meditation</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Get adequate sleep</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Deep breathing exercises</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Manage work-life balance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Weight Management -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card health-card h-100 border-0 shadow-sm hover-lift">
+                    <div class="card-body">
+                        <div class="health-icon mb-3">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Weight Management</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Maintain healthy BMI</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>5-10% weight loss helps</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Sustainable lifestyle changes</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Consult nutritionist</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Medical Check-up -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card health-card h-100 border-0 shadow-sm hover-lift">
+                    <div class="card-body">
+                        <div class="health-icon mb-3">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Medical Check-up</h5>
+                        <ul class="small list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Annual health screening</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Consult healthcare provider</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Preventive care focus</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Early detection matters</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <h3 class="text-primary fw-bold display-5">537M+</h3>
+                    <p class="text-muted">People with diabetes worldwide</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <h3 class="text-success fw-bold display-5">90%+</h3>
+                    <p class="text-muted">Type 2 diabetes cases</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-box">
+                    <h3 class="text-warning fw-bold display-5">1 in 10</h3>
+                    <p class="text-muted">Adults have diabetes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-gradient text-white">
+    <div class="container text-center">
+        <h2 class="mb-4 fw-bold">Take Control of Your Health Today</h2>
+        <p class="lead mb-4">Get a personalized diabetes risk assessment in just a few minutes.</p>
+        <a href="/assessment" class="btn btn-light btn-lg fw-bold">
+            <i class="fas fa-arrow-right me-2"></i>Start Assessment Now
+        </a>
+    </div>
+</section>
+
+{% endblock %}

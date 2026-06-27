@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Diabetes Track AI{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Page Header -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 fw-bold mb-3">
+                <i class="fas fa-envelope text-primary me-2"></i>Get in Touch
+            </h1>
+            <p class="lead text-muted">
+                Have questions, feedback, or suggestions? We'd love to hear from you!
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-sm border-0 mb-5">
+                <div class="card-body p-5">
+                    <form id="contactForm" method="POST">
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label fw-bold">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-lg" id="name" name="name" required placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label fw-bold">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control form-control-lg" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Message <span class="text-danger">*</span></label>
+                            <textarea class="form-control form-control-lg" id="message" name="message" rows="6" required placeholder="Your message, feedback, or suggestion..."></textarea>
+                            <small class="text-muted d-block mt-2">Max 1000 characters</small>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg fw-bold">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success Alert (Hidden) -->
+                    <div class="alert alert-success alert-dismissible fade show d-none" id="successAlert" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <strong>Thank you!</strong> Your message has been sent successfully.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Error Alert (Hidden) -->
+                    <div class="alert alert-danger alert-dismissible fade show d-none" id="errorAlert" role="alert">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        <strong>Error!</strong> Something went wrong. Please try again.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Cards -->
+            <div class="row g-3 mb-5">
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 text-center">
+                        <div class="card-body p-4">
+                            <div class="mb-3" style="font-size: 2.5rem;">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Email</h6>
+                            <p class="small text-muted mb-0">For general inquiries</p>
+                            <p class="small mb-0">
+                                <a href="mailto:info@diabetestrackAI.com" class="text-primary text-decoration-none">
+                                    asrafcse000@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 text-center">
+                        <div class="card-body p-4">
+                            <div class="mb-3" style="font-size: 2.5rem;">
+                                <i class="fas fa-globe text-success"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Website</h6>
+                            <p class="small text-muted mb-0">Visit our main site</p>
+                            <p class="small mb-0">
+                                <a href="https://www.diabetestrackAI.com" class="text-success text-decoration-none" target="_blank">
+                                    www.diabetestrackAI.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 text-center">
+                        <div class="card-body p-4">
+                            <div class="mb-3" style="font-size: 2.5rem;">
+                                <i class="fas fa-lightbulb text-warning"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Feedback</h6>
+                            <p class="small text-muted mb-0">Share your ideas</p>
+                            <p class="small mb-0">
+                                <a href="https://www.diabetestrackAI.com/feedback" class="text-warning text-decoration-none" target="_blank">
+                                    feedback.diabetestrackAI.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="card shadow-sm border-0 mb-5">
+                <div class="card-header bg-light border-bottom fw-bold">
+                    <i class="fas fa-question-circle text-info me-2"></i>Frequently Asked Questions
+                </div>
+                <div class="card-body p-5">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Is Diabetes Track AI accurate?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our model has been trained and tested on extensive clinical data with high accuracy metrics. 
+                                    However, it's designed for educational purposes and should not replace professional medical consultation.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How long does the assessment take?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The entire assessment process takes about 2-3 minutes. You'll need your recent health metrics 
+                                    (glucose level, BMI, HbA1c, etc.) to complete the form.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Can I get a PDF report?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! After completing your assessment, you can download a professional PDF report that you can 
+                                    share with your healthcare provider or keep for your records.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item border-0 mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Is my data secure and private?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Your privacy is important to us. All data is processed securely and is not stored after your session. 
+                                    Please review our privacy policy for more details.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Should I replace my doctor with this tool?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Absolutely not!</strong> This is a supplementary educational tool. Always consult with a 
+                                    qualified healthcare professional for diagnosis, treatment, and medical advice. This tool cannot 
+                                    replace professional medical evaluation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form JavaScript -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const successAlert = document.getElementById('successAlert');
+    const errorAlert = document.getElementById('errorAlert');
+    
+    try {
+        const response = await fetch('/submit-contact', {
+            method: 'POST',
+            body: formData
+        });
+        
+        if (response.ok) {
+            const result = await response.json();
+            successAlert.classList.remove('d-none');
+            errorAlert.classList.add('d-none');
+            document.getElementById('contactForm').reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successAlert.classList.add('d-none');
+            }, 5000);
+        } else {
+            errorAlert.classList.remove('d-none');
+            successAlert.classList.add('d-none');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        errorAlert.classList.remove('d-none');
+        successAlert.classList.add('d-none');
+    }
+});
+</script>
+
+{% endblock %}

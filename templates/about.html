@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block title %}About - Diabetes Track AI{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Page Header -->
+    <div class="row mb-5">
+        <div class="col-lg-10 mx-auto">
+            <h1 class="display-4 fw-bold mb-3">
+                <i class="fas fa-book text-primary me-2"></i>About Diabetes Track AI
+            </h1>
+            <p class="lead text-muted">
+                Learn about our advanced machine learning model and how it helps assess diabetes risk.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <!-- What is Diabetes Section -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-5">
+                    <h3 class="fw-bold mb-3">
+                        <i class="fas fa-question-circle text-success me-2"></i>What is Diabetes?
+                    </h3>
+                    <p>
+                        Diabetes is a chronic disease that affects how your body regulates blood glucose levels. 
+                        When you eat, your body breaks down food into glucose and uses it for energy. 
+                        The pancreas produces insulin, which helps cells absorb glucose.
+                    </p>
+                    <p>
+                        <strong>Type 2 Diabetes</strong> occurs when the body cannot effectively use the insulin produced 
+                        (insulin resistance) or doesn't produce enough insulin. It accounts for about 90% of all diabetes cases.
+                    </p>
+                    <p class="mb-0">
+                        Early detection and management of diabetes risk factors can significantly improve health outcomes 
+                        and prevent or delay complications.
+                    </p>
+                </div>
+            </div>
+
+            <!-- How Our Model Works -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-5">
+                    <h3 class="fw-bold mb-4">
+                        <i class="fas fa-brain text-info me-2"></i>How Our ML Model Works
+                    </h3>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <h5 class="fw-bold mb-3"><i class="fas fa-database text-primary me-2"></i>Data Input</h5>
+                                <p class="small mb-0">
+                                    The model analyzes 13 key health parameters including age, BMI, blood glucose, 
+                                    HbA1c levels, blood pressure, heart disease history, and smoking status.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <h5 class="fw-bold mb-3"><i class="fas fa-cogs text-success me-2"></i>Processing</h5>
+                                <p class="small mb-0">
+                                    A Hyper Parameter tuned Random Forest classifier processes your data using patterns learned from 
+                                    thousands of clinical cases to identify diabetes risk factors.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <h5 class="fw-bold mb-3"><i class="fas fa-chart-line text-warning me-2"></i>Analysis</h5>
+                                <p class="small mb-0">
+                                    The model evaluates how your metrics compare to healthy ranges and calculates 
+                                    a probability score reflecting your diabetes risk level.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <h5 class="fw-bold mb-3"><i class="fas fa-file-pdf text-danger me-2"></i>Report</h5>
+                                <p class="small mb-0">
+                                    You receive a comprehensive medical-style report with your assessment results, 
+                                    personalized recommendations, and printable documentation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Details -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-5">
+                    <h3 class="fw-bold mb-4">
+                        <i class="fas fa-microchip text-secondary me-2"></i>Technical Details
+                    </h3>
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold" width="35%">Algorithm</td>
+                                    <td>Random Forest Classifier (Tuned)</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Input Features</td>
+                                    <td>13 clinical and demographic parameters</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Output</td>
+                                    <td>Binary classification (Diabetic/Non-Diabetic) with probability score</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Use Case</td>
+                                    <td>Educational & Research - NOT a clinical diagnostic tool</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Accuracy</td>
+                                    <td>Validated on multiple test datasets with high precision</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Factors -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-5">
+                    <h3 class="fw-bold mb-4">
+                        <i class="fas fa-exclamation-circle text-danger me-2"></i>Key Risk Factors Assessed
+                    </h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="risk-item">
+                                <h6 class="fw-bold mb-2"><i class="fas fa-droplet text-info me-2"></i>Blood Glucose</h6>
+                                <small class="text-muted">Higher fasting glucose levels indicate reduced glucose control</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="risk-item">
+                                <h6 class="fw-bold mb-2"><i class="fas fa-weight text-warning me-2"></i>BMI</h6>
+                                <small class="text-muted">Higher BMI increases insulin resistance and diabetes risk</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="risk-item">
+                                <h6 class="fw-bold mb-2"><i class="fas fa-percent text-success me-2"></i>HbA1c Level</h6>
+                                <small class="text-muted">Reflects 3-month average glucose; higher levels indicate poor control</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="risk-item">
+                                <h6 class="fw-bold mb-2"><i class="fas fa-birthday-cake text-primary me-2"></i>Age</h6>
+                                <small class="text-muted">Risk increases with age, especially after 45 years</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="risk-item">
+                                <h6 class="fw-bold mb-2"><i class="fas fa-heart text-danger me-2"></i>Heart Disease</h6>
+                                <small class="text-muted">Significant correlation with diabetes and metabolic disease</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="risk-item">
+                                <h6 class="fw-bold mb-2"><i class="fas fa-smoking text-secondary me-2"></i>Smoking</h6>
+                                <small class="text-muted">Smoking impairs glucose metabolism and increases insulin resistance</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Disclaimer -->
+            <div class="alert alert-warning border-3 border-warning-subtle rounded-3 mb-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-shield-alt me-2"></i>Important Disclaimer
+                </h5>
+                <p class="mb-2">
+                    <strong>Diabetes Track AI is an educational and research tool only.</strong>
+                </p>
+                <ul class="mb-0 small">
+                    <li>NOT a substitute for professional medical diagnosis</li>
+                    <li>Always consult with a qualified healthcare provider</li>
+                    <li>Results should not be used for self-diagnosis</li>
+                    <li>Model trained on historical data with inherent limitations</li>
+                    <li>Individual factors may vary; professional assessment required</li>
+                </ul>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center">
+                <h4 class="fw-bold mb-4">Ready to assess your diabetes risk?</h4>
+                <a href="/assessment" class="btn btn-primary btn-lg">
+                    <i class="fas fa-arrow-right me-2"></i>Start Assessment Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
