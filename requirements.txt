@@ -5,3 +5,5 @@ joblib
 scikit-learn
 reportlab
 python-dateutil
+Flask
+gunicorn
