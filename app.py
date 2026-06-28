@@ -13,7 +13,8 @@ from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_RIGHT
 app = Flask(__name__)
 
 # Initialize model loader
-MODEL_PATH = os.path.join('models', 'tuned_random_forest_model.joblib')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "tuned_random_forest_model.joblib")
 diabetes_predictor = DiabetesModel(MODEL_PATH)
 
 # Store prediction data in session for PDF generation
